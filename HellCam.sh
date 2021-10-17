@@ -28,7 +28,7 @@ ask="${cyan}[${white}?${cyan}] ${purple}"
 error="${cyan}[${white}!${cyan}] ${red}"
 success="${cyan}[${white}√${cyan}] ${green}"
 
-version="1.1"
+version="1.0"
 
 cwd=`pwd`
 
