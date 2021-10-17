@@ -300,7 +300,7 @@ fi
 netcheck
 git_ver=`curl -s -N https://raw.githubusercontent.com/KasRoudra/HellCam/main/files/version.txt`
 if [[ "$version" != "$git_ver" && "$git_ver" != "404: Not Found" ]]; then
-    changelog=`curl -s -N https://raw.githubusercontent.com/KasRoudra/HellCam/main/files/changelog.log`
+    changelog=`curl -s -N https://raw.githubusercontent.com/HELL-MODS/HellCam/main/files/changelog.log`
     clear
     echo -e "$logo"
     echo -e "${info}HellCam has a new update!\n${info}Current: ${red}${version}\n${info}Available: ${green}${git_ver}\n"
