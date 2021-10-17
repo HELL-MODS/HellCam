@@ -264,7 +264,7 @@ if ! [[ -f $HOME/.ngrokfolder/ngrok || -f $HOME/.cffolder/cloudflared ]] ; then
             fi
             wget -q --show-progress "https://github.com/KasRoudra/files/raw/main/ngrok/ngrok-stable-linux-arm64.tgz" -O "ngrok.tgz"
             tar -zxf ngrok.tgz
-            rm -rf ngrok.tgz
+            rm -rf ngrok.tgz 
             wget -q --show-progress "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64" -O "cloudflared"
             break
         elif echo "$p" | grep -q "arm"; then
@@ -298,7 +298,7 @@ if ! [[ -f $HOME/.ngrokfolder/ngrok || -f $HOME/.cffolder/cloudflared ]] ; then
     fi
 fi
 netcheck
-git_ver=`curl -s -N https://raw.githubusercontent.com/KasRoudra/HellCam/main/files/version.txt`
+git_ver=`curl -s -N https://raw.githubusercontent.com/HELL-MODS/HellCam/main/files/version.txt`
 if [[ "$version" != "$git_ver" && "$git_ver" != "404: Not Found" ]]; then
     changelog=`curl -s -N https://raw.githubusercontent.com/HELL-MODS/HellCam/main/files/changelog.log`
     clear
@@ -308,7 +308,7 @@ if [[ "$version" != "$git_ver" && "$git_ver" != "404: Not Found" ]]; then
         read upask
         printf "$nc"
         if [[ "$upask" == "y" ]]; then
-            cd .. && rm -rf HellCam hellcam && git clone https://github.com/KasRoudra/HellCam
+            cd .. && rm -rf HellCam hellcam && git clone https://github.com/HELL-MODS/HellCam
             echo -e "\n${success}HellCam updated successfully!!"
             if [[ "$changelog" != "404: Not Found" ]]; then
             echo -e "${purple}[•] Changelog:\n${blue}${changelog}"
